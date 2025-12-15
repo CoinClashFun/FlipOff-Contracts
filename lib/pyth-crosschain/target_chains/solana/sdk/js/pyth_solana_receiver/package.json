@@ -1,0 +1,142 @@
+{
+  "name": "@pythnetwork/pyth-solana-receiver",
+  "version": "0.13.0",
+  "description": "Pyth solana receiver SDK",
+  "homepage": "https://pyth.network",
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/cjs/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyth-network/pyth-crosschain.git",
+    "directory": "target_chains/solana/sdk/js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "ts-duality",
+    "test:lint": "eslint src/ --max-warnings 0",
+    "test:format": "prettier --check \"src/**/*.ts\"",
+    "fix:lint": "eslint src/ --fix --max-warnings 0",
+    "fix:format": "prettier --write \"src/**/*.ts\"",
+    "prepublishOnly": "pnpm run build && pnpm test:lint",
+    "preversion": "pnpm run test:lint",
+    "version": "pnpm run format && git add -A src",
+    "clean": "rm -rf ./dist"
+  },
+  "keywords": [
+    "pyth",
+    "oracle"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cprussin/eslint-config": "catalog:",
+    "@pythnetwork/hermes-client": "workspace:*",
+    "@types/jest": "^29.4.0",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "jest": "^29.4.0",
+    "prettier": "catalog:",
+    "quicktype": "^23.0.76",
+    "ts-jest": "^29.0.5",
+    "ts-node": "catalog:"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@noble/hashes": "^1.4.0",
+    "@pythnetwork/price-service-sdk": "workspace:*",
+    "@pythnetwork/solana-utils": "workspace:*",
+    "@solana/web3.js": "^1.90.0"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "type": "module",
+  "exports": {
+    "./PythSolanaReceiver": {
+      "require": {
+        "types": "./dist/cjs/PythSolanaReceiver.d.ts",
+        "default": "./dist/cjs/PythSolanaReceiver.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/PythSolanaReceiver.d.ts",
+        "default": "./dist/esm/PythSolanaReceiver.mjs"
+      }
+    },
+    "./address": {
+      "require": {
+        "types": "./dist/cjs/address.d.ts",
+        "default": "./dist/cjs/address.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/address.d.ts",
+        "default": "./dist/esm/address.mjs"
+      }
+    },
+    "./compute_budget": {
+      "require": {
+        "types": "./dist/cjs/compute_budget.d.ts",
+        "default": "./dist/cjs/compute_budget.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/compute_budget.d.ts",
+        "default": "./dist/esm/compute_budget.mjs"
+      }
+    },
+    "./idl/pyth_push_oracle": {
+      "require": {
+        "types": "./dist/cjs/idl/pyth_push_oracle.d.ts",
+        "default": "./dist/cjs/idl/pyth_push_oracle.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/idl/pyth_push_oracle.d.ts",
+        "default": "./dist/esm/idl/pyth_push_oracle.mjs"
+      }
+    },
+    "./idl/pyth_solana_receiver": {
+      "require": {
+        "types": "./dist/cjs/idl/pyth_solana_receiver.d.ts",
+        "default": "./dist/cjs/idl/pyth_solana_receiver.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/idl/pyth_solana_receiver.d.ts",
+        "default": "./dist/esm/idl/pyth_solana_receiver.mjs"
+      }
+    },
+    "./idl/wormhole_core_bridge_solana": {
+      "require": {
+        "types": "./dist/cjs/idl/wormhole_core_bridge_solana.d.ts",
+        "default": "./dist/cjs/idl/wormhole_core_bridge_solana.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/idl/wormhole_core_bridge_solana.d.ts",
+        "default": "./dist/esm/idl/wormhole_core_bridge_solana.mjs"
+      }
+    },
+    ".": {
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      }
+    },
+    "./vaa": {
+      "require": {
+        "types": "./dist/cjs/vaa.d.ts",
+        "default": "./dist/cjs/vaa.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/vaa.d.ts",
+        "default": "./dist/esm/vaa.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/esm/index.mjs"
+}

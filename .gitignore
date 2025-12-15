@@ -1,0 +1,32 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+broadcast/
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+# Node modules (if any)
+node_modules/
+
+# Coverage
+lcov.info
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Old contract file (renamed to FlipOff.sol)
+src/CoinClash.sol

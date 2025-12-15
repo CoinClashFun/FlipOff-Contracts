@@ -1,0 +1,71 @@
+{
+  "name": "@pythnetwork/aptos-cli",
+  "version": "1.1.0",
+  "description": "Utilities for managing the Pyth Target Chain contract on Aptos",
+  "private": true,
+  "main": "./dist/cjs/index.cjs",
+  "scripts": {
+    "cli": "ts-node src/cli.ts",
+    "build": "ts-duality",
+    "test:format": "prettier --check .",
+    "fix:format": "prettier --write .",
+    "clean": "rm -rf ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "aptos": "./build/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.21",
+    "@types/yargs": "^17.0.13",
+    "prettier": "catalog:"
+  },
+  "dependencies": {
+    "@pythnetwork/contract-manager": "workspace:*",
+    "@pythnetwork/pyth-aptos-js": "workspace:*",
+    "aptos": "^1.3.14",
+    "ethers": "^5.7.1",
+    "js-sha3": "^0.8.0",
+    "yargs": "^17.5.1"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "type": "module",
+  "exports": {
+    "./cli": {
+      "require": {
+        "types": "./dist/cjs/cli.d.ts",
+        "default": "./dist/cjs/cli.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/cli.d.ts",
+        "default": "./dist/esm/cli.mjs"
+      }
+    },
+    "./commands/aptos": {
+      "require": {
+        "types": "./dist/cjs/commands/aptos.d.ts",
+        "default": "./dist/cjs/commands/aptos.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/commands/aptos.d.ts",
+        "default": "./dist/esm/commands/aptos.mjs"
+      }
+    },
+    ".": {
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/cjs/index.d.ts"
+}
