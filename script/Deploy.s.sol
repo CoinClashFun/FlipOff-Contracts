@@ -10,8 +10,8 @@ contract DeployScript is Script {
 
     function run() external {
         // Load private key from environment
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        address treasury = vm.envAddress("TREASURY_ADDRESS");
+        uint256 deployerPrivateKey = vm.envUint("MAINNET_PRIVATE_KEY");
+        address treasury = vm.envAddress("MAINNET_TREASURY_ADDRESS");
 
         console.log("Deploying FlipOff to Monad Mainnet...");
         console.log("Deployer:", vm.addr(deployerPrivateKey));

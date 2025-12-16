@@ -9,7 +9,7 @@ import "@pythnetwork/entropy-sdk-solidity/IEntropyConsumer.sol";
 /**
  * @title FlipOff
  * @notice A trustless coin flip betting game using Pyth Entropy for verifiable randomness
- * @dev Part of CoinClash.fun - Decentralized, provably fair games on Monad.
+ * @dev Part of CoinClash - Onchain, trustless, provably fair games.
  *      Players bet on HEADS or TAILS. Winner takes 95% of pot. Protocol takes 5%.
  *      Anyone can trigger game start and rounds by paying the entropy fee.
  */

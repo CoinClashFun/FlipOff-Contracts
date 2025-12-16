@@ -9,6 +9,7 @@ FlipOff is a decentralized, trustless, peer-to-peer coin flip betting game built
 | Network | Address |
 |---------|---------|
 | Monad Testnet | `0xcd892212d9f93f00869c931dcc9b052dfafdf5d1` |
+| Monad Mainnet | `0x8Ad8dbF5705F05c0Bc9aD6161bEc015D85946714` |
 
 ---
 
@@ -229,4 +230,4 @@ RefundClaimed(gameId, player, amount)
 
 ---
 
-Built with ❤️ on Monad • Part of [CoinClash.fun](https://coinclash.fun)
+Built with ❤️ on Monad • Part of CoinClash

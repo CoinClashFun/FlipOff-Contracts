@@ -25,6 +25,8 @@ include_push_bytes = true
 
 [rpc_endpoints]
 monad_testnet = "${MONAD_RPC_URL}"
+monad_mainnet = "${MONAD_MAINNET_RPC_URL}"
 
 [etherscan]
 monad_testnet = { key = "${ETHERSCAN_API_KEY}", url = "https://testnet.monadscan.com/api" }
+monad_mainnet = { key = "${ETHERSCAN_API_KEY}", url = "https://monadscan.com/api" }
